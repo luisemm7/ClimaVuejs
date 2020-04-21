@@ -33,8 +33,8 @@
     name: 'App',
     data () {
       return {
-        api_key: 'd4447aaad25f2b527ba60f2bf5df7597', //76c798523ed145498d704b76c842addd //d4447aaad25f2b527ba60f2bf5df7597
-        url_base: 'https://api.openweathermap.org/data/2.5', //http://api.weatherbit.io/v2.0/current  http://api.weatherbit.io/v2.0/  // https://api.openweathermap.org/data/2.5
+        api_key: 'cc8dccd293db616aed0baaf55609c94c', //76c798523ed145498d704b76c842addd //d4447aaad25f2b527ba60f2bf5df7597
+        url_base: 'https://api.openweathermap.org/data/2.5/', //http://api.weatherbit.io/v2.0/current  http://api.weatherbit.io/v2.0/  // https://api.openweathermap.org/data/2.5
         query: '',
         weather: {}
       }
@@ -45,8 +45,8 @@
         //if (e.key == "Enter") {
           fetch(`${this.url_base}weather?q=${this.query}&units=metric&APPID=${this.api_key}`)
             .then(res => {
-              return res.json();
-            }).then(this.setResults);
+              return res.json()
+            }).then(this.setResults)
         //}
       },
       setResults (results) {
